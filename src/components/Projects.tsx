@@ -1,5 +1,6 @@
-import { For, Show } from 'solid-js';
-import { FolderSolid } from 'solid-iconify/flowbite'; // Import icon
+import { For, Show } from "solid-js";
+// Import icon from solid-icons/cg
+import { CgBriefcase } from "solid-icons/cg";
 
 // Define a type for project data for better structure (optional but good practice)
 type ProjectItem = {
@@ -49,10 +50,11 @@ const projectData: ProjectItem[] = [
 
 export default function Projects() {
   return (
-    <section id="projects" class="container mx-auto p-8">
+    // Add scroll-mt-20 here
+    <section id="projects" class="container mx-auto p-8 scroll-mt-20">
       {/* Heading with Icon */}
       <h2 class="text-3xl font-semibold mb-6 text-lime-500 text-center flex items-center justify-center gap-3">
-        <FolderSolid class="w-7 h-7" /> {/* Icon */}
+        <CgBriefcase size={28} /> {/* Replaced Icon */}
         Experience / Projects
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
