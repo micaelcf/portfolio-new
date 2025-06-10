@@ -1,36 +1,3 @@
-@import "tailwindcss";
-/* Import Fontsource IBM Plex Sans weights */
-@import "@fontsource/ibm-plex-sans/400.css"; /* Regular */
-@import "@fontsource/ibm-plex-sans/500.css"; /* Medium */
-@import "@fontsource/ibm-plex-sans/600.css"; /* Semi-bold */
-@import "@fontsource/ibm-plex-sans/700.css"; /* Bold */
-
-:root {
-  --background-rgb: 214, 219, 220;
-  --foreground-rgb: 0, 0, 0;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background-rgb: 0, 0, 0;
-    --foreground-rgb: 255, 255, 255;
-  }
-}
-
-body {
-  background: rgb(var(--background-rgb));
-  color: rgb(var(--foreground-rgb));
-  font-family: "IBM Plex Sans", sans-serif;
-}
-
-@theme inline {
-  --animate-orbit: orbit var(--duration) linear infinite;
-  @keyframes orbit {
-    0% {
-      transform: rotate(0deg) translateY(var(--radius)) rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg) translateY(var(--radius)) rotate(-360deg);
-    }
-  }
-}
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
